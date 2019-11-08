@@ -1,0 +1,25 @@
+<div class="container py-5">
+  <h1 class= "display-4">connexion</h1>
+
+  <div class="row">
+    <div class="col-8 mx-auto">
+      <form [formGroup]="signinForm"(ngSubmit)="onSigninUser()">
+        <div class="form-group">
+          <input formControlName="email" type="email" placeholder="adresse email" class="form-control">
+        </div>
+        <div class="form-group">
+          <input  formControlName="password" type="password" placeholder="mot de passe" class="form-control">
+        </div>
+        <div class="text-center">
+          <button class="btn btn-primary" type="submit" [disabled]="signinForm.invalid">connexion</button>
+        </div>
+      </form>
+
+      <div class="text-center py-2">
+        <a [routerLink]="['/signup']">pas encore de compte? Inscription</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
